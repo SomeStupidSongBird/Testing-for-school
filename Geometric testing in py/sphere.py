@@ -18,10 +18,10 @@ def calcSurfArea(radius):
     return surfaceArea
 
 def printOutput(volume,surfaceArea):
-    print('__________________________________')
+    print('----------------------------------')
     print("The sphere's volume: %.2f"%volume) 
     print("The sphere's surface area: %.2f"%surfaceArea)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     r = getInput()

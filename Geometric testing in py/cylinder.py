@@ -19,10 +19,10 @@ def calcSurfArea(radius,height):
     return surfaceArea
 
 def printOutput(volume,surfaceArea):
-    print('__________________________________')
+    print('----------------------------------')
     print("The Cylindar's volume: %.2f"%volume)
     print("The Cylindar's surface area: %.2f"%surfaceArea)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     r,h = getInput()

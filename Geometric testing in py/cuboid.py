@@ -20,10 +20,10 @@ def calcSurfArea(length,width,height):
     return surfaceArea
 
 def printOutput(volume,surfaceArea):
-    print('__________________________________')
+    print('----------------------------------')
     print("The Cubeoidoid's volume: %.2f"%volume)
     print("The Cubeoidoid's volume: %.2f"%surfaceArea)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     r,w,h = getInput()

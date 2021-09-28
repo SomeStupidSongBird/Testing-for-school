@@ -9,9 +9,9 @@ def calcArea(base1,base2,height):
     return area
 
 def printOutput(area):
-    print('__________________________________')
+    print('----------------------------------')
     print("The Trapezoid's area: %.2f"%area)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     b1,b2,h = getInput()

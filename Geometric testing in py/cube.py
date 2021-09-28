@@ -18,10 +18,10 @@ def calcSurfArea(side):
     return surfaceArea
 
 def printOutput(volume,surfaceArea):
-    print('__________________________________')
+    print('----------------------------------')
     print("The Cube's volume: %.2f"%volume)
     print("The Cube's surface area: %.2f"%surfaceArea)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     s = getInput()

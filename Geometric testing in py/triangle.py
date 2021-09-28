@@ -10,9 +10,9 @@ def calcArea(side1,side2):
     return area
 
 def printOutput(area):
-    print('__________________________________')
+    print('----------------------------------')
     print("The Triangle's area: %.2f"%area)
-    print('__________________________________')
+    print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
     s1,s2,s3 = getInput()
