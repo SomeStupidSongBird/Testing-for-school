@@ -12,13 +12,13 @@ def getInput():
 
 def calcVolume(radius,height):
     if(radius<0 or height<0):
-        return NULL
-    volume = math.pi*(radius**2)*h/3
+        return None
+    volume = math.pi*(radius**2)*height/3
     return volume
 
 def calcSurfArea(radius,height):
     if(radius<0 or height<0):
-        return NULL
+        return None
     surfaceArea = math.pi*(math.sqrt(radius**2+height**2)+radius)*radius
     return surfaceArea
 

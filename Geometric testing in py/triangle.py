@@ -1,3 +1,5 @@
+import math
+
 #find area
 def getInput():
     side1 = int(input("Enter the first side of the Triangle: "))
@@ -7,9 +9,9 @@ def getInput():
 
 def calcArea(side1,side2,side3):
     if(side1<0 or side2<0 or side3<0):
-        return NULL
+        return None
     if(side1+side2<=side3 or side1+side3<=side2 or side2+side3<=side1):
-        return NULL
+        return None
     Alpha = math.acos((side2**2+side3**2-side1**2)/2*side2*side3)
     area = .5*side1*(side3*math.sin(Alpha))
     return area

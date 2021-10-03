@@ -4,31 +4,31 @@ import math
 
 class coneTest(unittest.TestCase):
     #test negative
-    def testcase1_11():
-        assert(cone.calcVolume(-1,1)==NULL)
-    def testcase1_12():
-        assert(cone.calcSurfArea(-1,1)==NULL)
-    def testcase1_21():
-        assert(cone.calcVolume(1,-1)==NULL)
-    def testcase1_22():
-        assert(cone.calcSurfArea(1,-1)==NULL)
+    def testcase1_11(self):
+        assert(cone.calcVolume(-1,1)==None)
+    def testcase1_12(self):
+        assert(cone.calcSurfArea(-1,1)==None)
+    def testcase1_21(self):
+        assert(cone.calcVolume(1,-1)==None)
+    def testcase1_22(self):
+        assert(cone.calcSurfArea(1,-1)==None)
     #test 1
-    def testcase2_1():
+    def testcase2_1(self):
         vol = cone.calcVolume(1,1)
         assert(vol>7.58 and vol<7.593)
-    def testcase2_2():
+    def testcase2_2(self):
         sa = cone.calcSurfArea(1,1)
         assert(sa>1.04 and sa<1.05)
     #test 0
-    def testcase3_1():
+    def testcase3_1(self):
         assert(cone.calcVolume(0,1)==0)
-    def testcase3_2():
+    def testcase3_2(self):
         assert(cone.calcSurfArea(0,1)==0)
     #test long decimal math.pi
-    def testcase6_1():
+    def testcase6_1(self):
         vol = cone.calcVolume(math.pi,1)
         assert(vol>10.33 and vol< 10.34)
-    def tetscase6_2():
+    def tetscase6_2(self):
         sa = cone.calcSurfArea(math.pi,1)
         assert(sa>44.96 and sa<44.97)
 

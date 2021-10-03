@@ -13,18 +13,18 @@ def getInput():
 
 def calcVolume(length,width,height):
     if(length<0 or height<0 or width<0):
-        return NULL
+        return None
     volume = length*width*height
     if(volume<0):
-        return NULL
+        return None
     return volume
 
 def calcSurfArea(length,width,height):
     if(length<0 or height<0 or width<0):
-        return NULL
+        return None
     surfaceArea = length*width*2 + length*height*2 + width*height*2
     if(surfaceArea<0):
-        return NULL
+        return None
     return surfaceArea
 
 def printOutput(volume,surfaceArea):
@@ -34,7 +34,7 @@ def printOutput(volume,surfaceArea):
     print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
-    r,w,h = getInput()
+    l,w,h = getInput()
     if (l<0 or h<0 or w<0) : return
     volume = calcVolume(l,w,h)
     sA = calcSurfArea(l,w,h)
