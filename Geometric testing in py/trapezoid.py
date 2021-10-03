@@ -5,6 +5,8 @@ def getInput():
     return base1,base2,height
 
 def calcArea(base1,base2,height):
+    if(base1<0 or base2<0 or height<0):
+        return NULL
     area = (base1+base2)*height/2
     return area
 

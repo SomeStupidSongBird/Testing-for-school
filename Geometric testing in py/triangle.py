@@ -5,8 +5,13 @@ def getInput():
     side3 = int(input("Enter the third side of the Triangle: "))
     return side1,side2,side3
 
-def calcArea(side1,side2):
-    area = math.sqrt(side1**2+(side2/2)**2) * side2
+def calcArea(side1,side2,side3):
+    if(side1<0 or side2<0 or side3<0):
+        return NULL
+    if(side1+side2<=side3 or side1+side3<=side2 or side2+side3<=side1):
+        return NULL
+    Alpha = math.acos((side2**2+side3**2-side1**2)/2*side2*side3)
+    area = .5*side1*(side3*math.sin(Alpha))
     return area
 
 def printOutput(area):

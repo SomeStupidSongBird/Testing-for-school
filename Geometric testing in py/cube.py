@@ -10,10 +10,14 @@ def getInput():
     return side
 
 def calcVolume(side):
+    if(side<0):
+        return NULL
     volume = side**3
     return volume
 
 def calcSurfArea(side):
+    if(side<0):
+        return NULL
     surfaceArea = side**2*6
     return surfaceArea
 
