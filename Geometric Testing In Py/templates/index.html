@@ -1,0 +1,33 @@
+<!-- everything but the form is copied from https://github.com/axbjos/seng3110_geometry_web -->
+
+<html>
+    <head>
+        <title>Geometry Calculator Web App</title>
+    </head>
+    <body>
+        <div>
+            <h3>SENG3110 Geometry Calculator</h3>
+            <small>Christopher Ferrie</small>
+            <br>
+            <h4>Please Select From the Following: </h4>
+        </div>
+        <!-- I used this form of form instead of radio buttons so I could have a simple one button system to get to the element -->
+        <form action="{{url_for("mainMenu")}}" method="post">
+            <input id="shapebutton" name="shapebutton" type="hidden" value="sphere">
+            <input type="submit" value="Sphere">
+        </form>
+        <form action="{{url_for("mainMenu")}}" method="post">
+            <input id="shapebutton" name="shapebutton" type="hidden" value="cylinder">
+            <input type="submit" value="Cylinder">
+        </form>
+        <form action="{{url_for("mainMenu")}}" method="post">
+            <input id="shapebutton" name="shapebutton" type="hidden" value="cone">
+            <input type="submit" value="Cone">
+        </form>
+        <form action="{{url_for("mainMenu")}}" method="post">
+            <input id="shapebutton" name="shapebutton" type="hidden" value="cuboid">
+            <input type="submit" value="Cuboid">
+        </form>
+
+    </body>
+</html>
