@@ -15,7 +15,7 @@ def mainMenu():
             return redirect(url_for('cylinderForm'))
         elif shape=="cone":
             return redirect(url_for("coneForm"))
-        elif shape=="cubiod":
+        elif shape=="cuboid":
             return redirect(url_for("cuboidForm"))
     return render_template("index.html")            # if the signal is HTTP GET
 
