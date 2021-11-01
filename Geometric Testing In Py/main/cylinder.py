@@ -22,10 +22,24 @@ def calcSurfArea(radius,height):
     surfaceArea = math.pi*2*radius*(radius+height) #math
     return surfaceArea
 
-def printOutput(volume,surfaceArea):  #cl output
+def calcLatSurfArea(radius,height):
+    if(radius<0 or height<0): #vibe check
+        return None
+    latSA = 2*math.pi*radius*height
+    return latSA
+
+def calcEndSurfArea(radius):
+    if(radius<0):
+        return None
+    area = math.pi*radius*radius
+    return area
+
+def printOutput(volume,surfaceArea,lateralSurfaceArea,endSurfaceArea):  #cl output
     print('----------------------------------')
     print("The Cylindar's volume: %.2f"%volume)
     print("The Cylindar's surface area: %.2f"%surfaceArea)
+    print("The Cylindar's lateral surface area: %.2f"%lateralSurfaceArea)
+    print("The Cylindar's end surface area: %.2f"%endSurfaceArea)
     print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
@@ -33,7 +47,9 @@ def run(): #defining a run function for better readability and exportability
     if (r<0 or h<0) : return
     volume = calcVolume(r,h)
     sA = calcSurfArea(r,h)
-    printOutput(volume,sA)
+    latsa = calcLatSurfArea(r,h)
+    endsa = calcEndSurfArea(r)
+    printOutput(volume,sA,latsa,endsa)
 
 if __name__=='__main__':
     run()

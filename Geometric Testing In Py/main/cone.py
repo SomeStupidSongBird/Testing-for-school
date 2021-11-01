@@ -23,10 +23,17 @@ def calcSurfArea(radius,height):
     surfaceArea = math.pi*(math.sqrt(radius**2+height**2)+radius)*radius  # math
     return surfaceArea
 
-def printOutput(volume,surfaceArea): #just formatted printing
+def calcLatteralSurfArea(radius,height):
+    if(radius<0 or height<0): #check if it's positive again
+        return None
+    latSA = math.sqrt(radius**2+height**2)*math.pi*radius
+    return latSA
+
+def printOutput(volume,surfaceArea,lateralSurfaceArea): #just formatted printing
     print('----------------------------------')
     print("The Cone's volume: %.2f"%volume)
     print("The Cone's surface area: %.2f"%surfaceArea)
+    print("The Cone's lateral surface area: %.2f"%lateralSurfaceArea)
     print('----------------------------------')
 
 def run(): #defining a run function for better readability and exportability
@@ -35,7 +42,8 @@ def run(): #defining a run function for better readability and exportability
     if (r<0 or h<0) : return
     volume = calcVolume(r,h)
     sA = calcSurfArea(r,h)
-    printOutput(volume,sA)
+    latSA = calcLatteralSurfArea(r,h)
+    printOutput(volume,sA,latSA)
 
 if __name__=='__main__':
     run()
