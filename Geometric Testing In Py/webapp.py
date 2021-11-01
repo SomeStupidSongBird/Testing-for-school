@@ -39,7 +39,9 @@ def cylinderForm():
         height = request.form.get("height")
         vol = cylinder.calcVolume(int(radius),int(height))
         sA = cylinder.calcSurfArea(int(radius),int(height))
-        return "User entered: Radius "+ str(radius) + ",User entered: Height "+ str(height) + ". <p>The Volume is: " + str(vol) + ", the Surface area is: " + str(sA)
+        latSA = cylinder.calcLatSurfArea(int(radius),int(height))
+        endSA = cylinder.calcEndSurfArea(int(radius))
+        return "User entered: Radius "+ str(radius) + ",User entered: Height "+ str(height) + ". <p>The Volume is: " + str(vol) + ", the Surface area is: " + str(sA) + ", the Lateral Surface area is: "+ str(latSA)+", the End Surface area is: "+ str(endSA)
     return render_template("cylinder.html")
 
 @app.route("/cone",methods= ["GET","POST"])
@@ -51,7 +53,8 @@ def coneForm():
         height = request.form.get("height")
         vol = cone.calcVolume(int(radius),int(height))
         sA = cone.calcSurfArea(int(radius),int(height))
-        return "User entered: Radius "+ str(radius) + ", Height "+ str(height)  + ". <p>The Volume is: " + str(vol) + ", the Surface area is: " + str(sA)
+        latSA = cone.calcLatteralSurfArea(int(radius),int(height))
+        return "User entered: Radius "+ str(radius) + ", Height "+ str(height)  + ". <p>The Volume is: " + str(vol) + ", the Surface area is: " + str(sA)+ "the Lateral Surface area is: "+ str(latSA)
     return render_template("cone.html")
     
 @app.route("/cuboid",methods= ["GET","POST"])
