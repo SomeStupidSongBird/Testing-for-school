@@ -14,25 +14,25 @@ def calcVolume(radius,height):
     if(radius<0 or height<0): #positive check
         return None
     volume = math.pi*(radius**2)*height #math
-    return volume
+    return round(volume,2)
 
 def calcSurfArea(radius,height):
     if(radius<0 or height<0): #vibe check
         return None
     surfaceArea = math.pi*2*radius*(radius+height) #math
-    return surfaceArea
+    return round(surfaceArea,2)
 
 def calcLatSurfArea(radius,height):
     if(radius<0 or height<0): #vibe check
         return None
     latSA = 2*math.pi*radius*height
-    return latSA
+    return round(latSA,2)
 
 def calcEndSurfArea(radius):
     if(radius<0):
         return None
     area = math.pi*radius*radius
-    return area
+    return round(area,2)
 
 def printOutput(volume,surfaceArea,lateralSurfaceArea,endSurfaceArea):  #cl output
     print('----------------------------------')

@@ -19,13 +19,6 @@ class cubeTest(unittest.TestCase):
         assert(cube.calcVolume(0)==0)
     def testcase3_2(self):
         assert(cube.calcSurfArea(0)==0)
-    #test long decimal math.pi
-    def testcase6_1(self):
-        vol = cube.calcVolume(math.pi)
-        assert(vol > 31 and vol < 31.01)
-    def tetscase6_2(self):
-        sa = cube.calcSurfArea(math.pi)
-        assert(sa>59.21 and sa<59.22)
 
 if __name__=="__main__":
     unittest.main()

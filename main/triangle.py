@@ -15,7 +15,7 @@ def calcArea(side1,side2,side3):
         return None
     halfperimeter = (side1+side2+side3)/2
     area = math.sqrt(halfperimeter*(halfperimeter-side1)*(halfperimeter-side2)*(halfperimeter-side3)) 
-    return area
+    return round(area,2)
 
 def printOutput(area): #just formatted printing 
     print('----------------------------------')

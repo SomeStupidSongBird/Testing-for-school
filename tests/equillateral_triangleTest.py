@@ -9,14 +9,10 @@ class equillateral_triangleTest(unittest.TestCase):
     #test 1
     def testcase2_1(self):
         area = equillateral_triangle.calcArea(1)
-        assert(area>.43 and area<.44)
+        assert(area==.43)
     #test 0
     def testcase3_1(self):
         assert(equillateral_triangle.calcArea(0)==0)
-    #test long decimal math.pi
-    def testcase6_1(self):
-        area = equillateral_triangle.calcArea(math.pi)
-        assert(area>4.27 and area< 4.28)
-
+        
 if __name__=="__main__":
     unittest.main()

@@ -17,7 +17,7 @@ def calcVolume(length,width,height):
     volume = length*width*height #ez math
     if(volume<0): #technically this should be an irrelevent but I'll leave it in just in case
         return None
-    return volume
+    return round(volume,2)
 
 def calcSurfArea(length,width,height):
     if(length<0 or height<0 or width<0): #vibe check
@@ -25,7 +25,7 @@ def calcSurfArea(length,width,height):
     surfaceArea = length*width*2 + length*height*2 + width*height*2 #math
     if(surfaceArea<0): # again, dont know if this is needed still but eh
         return None
-    return surfaceArea
+    return round(surfaceArea,2)
 
 def printOutput(volume,surfaceArea): #cl output bonanza
     print('----------------------------------')

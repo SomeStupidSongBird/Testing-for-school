@@ -9,7 +9,7 @@ def calcArea(base1,base2,height):
     if(base1<0 or base2<0 or height<0): #check all sides are positive
         return None
     area = (base1+base2)*height/2 #math
-    return area
+    return round(area,2)
 
 def printOutput(area): #output printing
     print('----------------------------------')

@@ -14,13 +14,13 @@ def calcVolume(side):
     if(side<0): #check if it's positive again
         return None
     volume = side**3    # math
-    return volume
+    return round(volume,2)
 
 def calcSurfArea(side):
     if(side<0): #check if it's positive again
         return None
     surfaceArea = side**2*6 #math
-    return surfaceArea
+    return round(surfaceArea,2)
 
 def printOutput(volume,surfaceArea): #just formatted printing
     print('----------------------------------')

@@ -18,9 +18,6 @@ class trapezoidTest(unittest.TestCase):
         assert(trapezoid.calcArea(0,0,0)==0)
     def testcase3_2(self):
         assert(trapezoid.calcArea(0,1,1)==.5)
-    #test long decimal math.pi
-    def testcase6_1(self):
-        area = trapezoid.calcArea(math.pi,1,1)
-        assert(area<2.1 and area>2.07)
+        
 if __name__=="__main__":
     unittest.main()

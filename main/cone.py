@@ -15,19 +15,19 @@ def calcVolume(radius,height):
     if(radius<0 or height<0): #check if it's positive again
         return None
     volume = math.pi*(radius**2)*height/3  #math
-    return volume
+    return round(volume,2)
 
 def calcSurfArea(radius,height):
     if(radius<0 or height<0): #check if it's positive again
         return None
     surfaceArea = math.pi*(math.sqrt(radius**2+height**2)+radius)*radius  # math
-    return surfaceArea
+    return round(surfaceArea,2)
 
 def calcLatteralSurfArea(radius,height):
     if(radius<0 or height<0): #check if it's positive again
         return None
     latSA = math.sqrt(radius**2+height**2)*math.pi*radius
-    return latSA
+    return round(latSA,2)
 
 def printOutput(volume,surfaceArea,lateralSurfaceArea): #just formatted printing
     print('----------------------------------')

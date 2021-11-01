@@ -8,7 +8,7 @@ def calcArea(side1):
     if(side1<0):
         return None
     area = (math.sqrt(side1**2-(side1/2)**2)) * side1/2 # i have no idea what i was doing and i had no idea when i was writing this
-    return area
+    return round(area,2)
 
 def printOutput(area):
     print('----------------------------------')

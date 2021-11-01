@@ -13,13 +13,13 @@ def calcVolume(radius):
     if(radius<0): #check for positive again
         return None
     volume = math.pi*(radius**3)*4/3 # ez math
-    return volume
+    return round(volume,2)
 
 def calcSurfArea(radius):
     if(radius<0): #check if positive again
         return None
     surfaceArea = math.pi*4*(radius**2) # ez math 2
-    return surfaceArea
+    return round(surfaceArea,2)
 
 def printOutput(volume,surfaceArea): #output to command line
     print('----------------------------------')
