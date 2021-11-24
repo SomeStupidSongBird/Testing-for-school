@@ -2,17 +2,19 @@
     <head></head>
     <body>
         <!--This allows the user to return to the index page without manually touching the URL or pressing the "go back a page button"-->
-        <form action="{{url_for("sphereForm")}}" method="post">
+        <form id="return_form" action="{{url_for("cylinderForm")}}" method="post">
             <input id="home" name="home" value="true" type="hidden">
             <input type="submit" value="Return">
         </form>
         <!-- this is the form that lets the user enter values for the calculation-->
-        <form action="{{ url_for("sphereForm")}}" method="post">
+        <form id="input_form" action="{{ url_for("cylinderForm")}}" method="post">
             <label for="radius">Please Enter the radius:</label>
             <input type="text" id="radius" name="rad" placeholder="radius">
+            <label for="height">Please Enter the height</label>
+            <input type="text" id="height" name="height" placeholder="height">
         </br>
         <p></p>
-            <button type="submit">Calculate Volume and Surface Area</button>
+            <button id="submit" type="submit">Calculate Volume and Surface Area</button>
         </form>
     </body>
 </html>
